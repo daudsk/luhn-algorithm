@@ -46,14 +46,14 @@ const findInvalidCards = cardArray => {
   let validBatch = [];
   let invalidBatch = [];
   for (let i = 0; i < cardArray.length; i++) {
-    if (validateCred(cardArray[i]) === true) {
+    if (validateCred(cardArray[i])) {
       validBatch.push(cardArray[i]);
     } else {
       invalidBatch.push(cardArray[i])
       //console.log(invalidBatch)
     }
   }
-  return validBatch;
+  return invalidBatch;
 }
 
 //console.log(findInvalidCards(batch))
