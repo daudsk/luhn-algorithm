@@ -63,16 +63,16 @@ function isInvalidCardCompanies(faultyCards) {
   let badCompany = [];
   for (let i = 0; i < faultyCards.length; i++) {
     if (faultyCards[i][0] === 3) {
-      faultyCardAndCompany.unshift(`Amex (American Express) - ${faultyCards[i]}`)
+      faultyCardAndCompany.unshift(`Amex (American Express) - ${faultyCards[i].join("")}`)
       badCompany.unshift('\nAmex (American Express)')
       } else if (faultyCards[i][0] === 4) {
-      faultyCardAndCompany.unshift(`Visa - ${faultyCards[i].join(" ")}`)
+      faultyCardAndCompany.unshift(`Visa - ${faultyCards[i].join("")}`)
       badCompany.unshift('Visa')
       } else if (faultyCards[i][0] === 5) {
-      faultyCardAndCompany.unshift(`MasterCard - ${faultyCards[i].join(" ")}`)
+      faultyCardAndCompany.unshift(`MasterCard - ${faultyCards[i].join("")}`)
       badCompany.unshift('MasterCard')
       } else if (faultyCards[i][0] === 6) {
-      faultyCardAndCompany.unshift(`Discover - ${faultyCards[i].join(" ")}`)
+      faultyCardAndCompany.unshift(`Discover - ${faultyCards[i].join("")}`)
       badCompany.unshift('Discover')
       } else return "Company not found."
     }
